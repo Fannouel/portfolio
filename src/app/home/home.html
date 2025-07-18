@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <!-- Partie gauche : Informations personnelles -->
+    <div class="col-md-5 col-12 order-2 order-md-1 mb-4">
+      <div class="d-flex flex-column justify-content-center text-white px-4 py-5 h-100">
+        <h1 class="fw-bold">{{ lastname }}, {{ name }}</h1>
+        <h2 class="text-warning mb-4"><img
+          src="icons/diploma-svg.svg"
+          width="50"
+          height="50"
+          class="me-2"
+        />{{ status }}</h2>
+        <div class="d-flex align-items-center flex-wrap mb-4">
+          <div class="me-4 d-flex align-items-center mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="mail" width="20" height="20" class="me-2" />
+            <a>andrianjafyfanoela&#64;gmail.com</a>
+          </div>
+
+          <div class="d-flex align-items-center mb-2">
+            <img src="icons/whatsapp.png" alt="whatsapp" width="20" height="20" class="me-2" />
+            <span>+261 34 25 098 49</span>
+          </div>
+          <div class="me-4 d-flex align-items-center mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="mail" width="20" height="20" class="me-2" />
+            <a href="https://www.linkedin.com/in/andrianjafy-fanoela-23883818b" target="_blank" rel="noopener noreferrer" class="text-white">Fanoela</a> 
+          </div>
+          <div class="me-4 d-flex align-items-center mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="mail" width="20" height="20" class="me-2" />
+            <a href="https://github.com/Fannouel?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-white">Fanoela git repository</a> 
+          </div>
+        </div>
+
+
+
+        <!-- <p class="lead mb-4">
+          spécialisé en :
+        </p>
+
+        <div class="accordion accordion-flush mb-4" id="skillsAccordion">
+          <ng-container *ngFor="let stack of stacks; let i = index">
+            <div class="accordion-item bg-transparent text-white rounded-2 mb-2">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-transparent text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#panel' + i"
+                  [attr.aria-expanded]="'false'"
+                  [attr.aria-controls]="'panel' + i"
+                >
+                  {{ stack.name }}
+                </button>
+              </h2>
+              <div
+                [id]="'panel' + i"
+                class="accordion-collapse collapse"
+                data-bs-parent="#skillsAccordion"
+              >
+                <div class="accordion-body ps-4">
+                  <ul class="list-unstyled">
+                    <li
+                      *ngFor="let tech of stack.technologies"
+                      class="d-flex align-items-center mb-2"
+                    >
+                      <img
+                        [src]="tech.logo"
+                        [alt]="tech.name + ' logo'"
+                        width="24"
+                        height="24"
+                        class="me-2"
+                      />
+                      <strong>{{ tech.name }}</strong>
+                      <span class="ms-auto text-warning small">{{ tech.level }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div> -->
+
+        <!-- Bouton lien -->
+        <a
+          class="btn btn-primary btn-lg shadow-sm w-auto align-self-start"
+          routerLink="/about"
+        >
+          EN SAVOIR PLUS
+        </a>
+      </div>
+    </div>
+
+    <!-- Partie droite : Image ou autre contenu -->
+    <div class="col-md-7 col-12 order-1 order-md-2">
+      <div
+        class="image-container d-flex flex-column justify-content-center text-white px-4 py-5 h-100"
+        (mouseenter)="onMouseEnter()"
+      >
+        <img [src]="currentImage" alt="Fanoela photo" class="animated-photo" [class.rotate-animation]="rotated"/>
+      </div>
+    </div>
+  </div>
+</div>
