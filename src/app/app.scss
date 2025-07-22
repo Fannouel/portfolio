@@ -9,16 +9,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto; /* IMPORTANT : scroll si nécessaire */
     z-index: 1050;
 }
 
 .modal-page {
     background-color: rgb(55, 118, 171);
     border-radius: 12px;
-    max-width: 75vw;
+    // max-width: 75vw;
     min-width: 75vw;
-    max-height: 90vh;
+    max-height: 95vh;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -27,22 +26,27 @@
 .modal-content {
     pointer-events: auto; /* 👈 important */
     background-color: rgb(55, 118, 171);
-    min-height: 90vh;
-    max-height: 90vh;
-    max-width: 75vw;
-    min-width: 75vw;
+    flex: 1;
+    overflow-y: auto;
+
+}
+
+.modal {
+    overflow-y: hidden;
 }
 
 // .modal-content {
 //     display: flex;
 //     flex-direction: column;
 // }
-// .modal-content {
-//   overflow-y: auto;
-//   max-height: 90vh; /* ✅ pour que le contenu reste visible */
+.modal-content {
+  overflow-y: auto;
+  max-height: 90vh; /* ✅ pour que le contenu reste visible */
 
-//   scrollbar-width: none; /* Firefox */
-//   -ms-overflow-style: none; /* IE 10+ */
-// }
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+
 
 

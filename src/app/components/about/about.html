@@ -2,11 +2,10 @@
 <div class="background-gradient"></div>
 <div class="container">
   <div class="row">
-    <div class=" about-content col-md-6 col-12 order-2 order-md-1 mb-4">
+    <div class=" about-content col-md-6 col-12">
       <div class="d-flex flex-column justify-content-center text-white px-4 py-5 h-100">
         <h1 class="display-5 fw-bold mb-4 text-gradient">À propos:</h1>
         <h2 class="fw-semibold text-white mb-3">ANDRIANJAFIMALALA Harimanantsoa Fanoela</h2>
-        <p class="text-light mb-3">🇲🇬 Malagasy</p>
         <h4 class="fw-normal text-white mb-4">
           <img
             src="icons/diploma-svg.svg"
@@ -16,15 +15,130 @@
           />Ingénieur en informatique polyvalent
         </h4>
         <p class="text-light mb-3">
-          Développeur fullstack passionné par la technologie et les projets à fort impact. 
+          Développeur fullstack passionné par la technologie et les projects à fort impact. 
           Je suis curieux, rigoureux, et toujours prêt à relever de nouveaux défis.
         </p>
+
+        <p class="typewriter text-white">"Créer. Optimiser. Répéter."</p>
+
+        <h1 class="fw-bold text-gradient">Mes Compétences:</h1>
+        <div class="d-flex flex-column justify-content-center text-white" style="max-width: 600px;">
+          <!-- Accordion des stacks -->
+          <div class="accordion accordion-flush mb-4" id="skillsAccordion">
+            <ng-container *ngFor="let stack of hardSkills; let i = index">
+              <div class="accordion-item bg-transparent text-white border border-secondary rounded-2 mb-2">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#panel' + i"
+                    [attr.aria-expanded]="'false'"
+                    [attr.aria-controls]="'panel' + i"
+                  >
+                    {{ stack.stack }}
+                  </button>
+                </h2>
+                <div
+                  [id]="'panel' + i"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#skillsAccordion"
+                >
+                  <div class="accordion-body ps-4">
+                    <ul class="list-unstyled">
+                      <li
+                        *ngFor="let tech of stack.skillIds"
+                        class="d-flex align-items-center mb-2"
+                      >
+                        <img
+                          [src]="getSkillsById(tech)?.logo"
+                          [alt]="getSkillsById(tech)?.label + ' logo'"
+                          width="24"
+                          height="24"
+                          class="me-2"
+                        />
+                        <strong>{{ getSkillsById(tech)?.label }}</strong>
+                        <span class="ms-auto text-warning small">{{ getSkillsById(tech)?.level }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="col-md-7 col-12 order-1 order-md-2">
-
+    <div class="col-md-6 col-12 about-content">
+        <h1 class="display-5 fw-bold mb-4 text-gradient text-light">Mes parcours professionnels:</h1>
+        <div class="list-group">
+          <ng-container *ngFor="let p of parcours">
+            <a href="#" class="list-group-item list-group-item-action" (click)="openParcoursModal(p); $event.preventDefault()">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><strong>{{ p.years}}:</strong> {{ p.poste }}</h5>
+                <small>{{ p.duration }}</small>
+              </div>
+              <p class="mb-1"><strong>{{ p.company }}</strong></p>
+              <small>{{ p.description}}</small>
+              <p>xp: 
+                <ng-container *ngFor="let skill of p.skillIds">
+                  <ng-container *ngIf="getSkillsById(skill)?.logo as logo">
+                    <img
+                      *ngIf="isValidLogo(logo)"
+                      [src]="logo"
+                      [alt]="getSkillsById(skill)?.label + ' logo'"
+                      width="24"
+                      height="24"
+                      class="me-2"
+                    />
+                  </ng-container>
+                </ng-container>
+                <a href="" class="btn btn-secondary btn-sm mt-2">en detail ...</a>
+              </p>
+            </a>
+          </ng-container>
+        </div>
     </div>
   </div>
 </div> 
+<!-- Modal -->
+<div class="modal fade show d-block" tabindex="-1" *ngIf="showModal" style="background: rgba(0,0,0,0.5);">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <strong>{{ selectedParcours?.years }}:</strong> {{ selectedParcours?.poste }} ({{ selectedParcours?.company }})
+        </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="showModal = false"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Description:</strong> {{ selectedParcours?.description }}</p>
+        <p><strong>Projets realiser:</strong></p>
+        <ul class="list-group">
+          <li 
+            *ngFor="let project of filteredProjectsByCompany(selectedParcours?.id)" 
+            class="list-group-item list-group-item-action"
+          >
+            <h5 class="text-danger">{{ project.title }}</h5>
+            <p>{{ project.description }}</p>
+          </li>
+        </ul>
+        <p><strong>Compétences utilisées:</strong></p>
+        <div class="d-flex flex-wrap">
+          <ng-container *ngFor="let skill of selectedParcours?.skillIds">
+            <ng-container *ngIf="getSkillsById(skill) as s">
+              <img *ngIf="isValidLogo(s.logo)" [src]="s.logo" [alt]="s.label + ' logo'" class="me-2 mb-2" width="32" height="32" />
+              <span class="me-3">{{ s.label }}</span><span class="text-warning"> ({{ s.level || 'Niveau inconnu' }})</span>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
 

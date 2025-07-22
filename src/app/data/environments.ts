@@ -1,52 +1,59 @@
 export const environment = {
   production: false,
 
+
   hardSkills: [
     {
-      domaine: 'Langages',
-      skills: [
-        { name: 'Python', niveau: 'avancé', logo: 'assets/logos/python.svg' },
-        { name: 'TypeScript', niveau: 'avancé', logo: 'assets/logos/typescript.svg' },
-        { name: 'HTML', niveau: 'avancé', logo: 'assets/logos/html5.svg' },
-        { name: 'CSS', niveau: 'avancé', logo: 'assets/logos/css3.svg' }
-      ]
+      stack: 'Langages',
+      skillIds: [
+          'python',
+          'typescript',
+          'php',
+          'javascript',
+          'sql'
+        ]
     },
     {
-      domaine: 'Frameworks & Librairies',
-      skills: [
-        { name: 'Angular', niveau: 'avancé', logo: 'assets/logos/angular.svg' },
-        { name: 'Bootstrap', niveau: 'avancé', logo: 'assets/logos/bootstrap.svg' },
-        { name: 'Angular Material', niveau: 'avancé', logo: 'assets/logos/angularmaterial.svg' },
-        { name: 'Odoo (Framework)', niveau: 'intermédiaire', logo: 'assets/logos/odoo.svg' }
-      ]
+      stack: 'Frameworks & Librairies',
+      skillIds: [
+          'angular',
+          'codigniter',
+          'flask',
+          'nest',
+          'bootstrap',
+        ]
     },
     {
-      domaine: 'Base de données',
-      skills: [
-        { name: 'PostgreSQL', niveau: 'avancé', logo: 'assets/logos/postgresql.svg' },
-        { name: 'Redis', niveau: 'intermédiaire', logo: 'assets/logos/redis.svg' }
-      ]
+      stack: 'Base de données',
+      skillIds: [
+          'mysql',
+          'postgres',
+        ]
     },
     {
-      domaine: 'DevOps / Conteneurisation',
-      skills: [
-        { name: 'Docker', niveau: 'intermédiaire', logo: 'assets/logos/docker.svg' },
-        { name: 'Git', niveau: 'avancé', logo: 'assets/logos/git.svg' }
-      ]
+      stack: 'DevOps / Tools',
+      skillIds: [
+          'docker',
+          'git',
+          'odoo',
+          'zabbix',
+          'glpi',
+        ]
     },
     {
-      domaine: 'Systèmes',
-      skills: [
-        { name: 'Linux / WSL', niveau: 'avancé', logo: 'assets/logos/linux.svg' },
-        { name: 'Windows Server (de base)', niveau: 'débutant', logo: 'assets/logos/windows.svg' }
-      ]
+      stack: 'Systèmes',
+      skillIds: [
+          'ubuntu',
+          'windows',
+        ]
     },
     {
-      domaine: 'Data Science / Analyse',
-      skills: [
-        { name: 'Pandas', niveau: 'débutant', logo: 'assets/logos/pandas.svg' },
-        { name: 'Jupyter Notebook', niveau: 'débutant', logo: 'assets/logos/jupyter.svg' }
-      ]
+      stack: 'Data Science / Analyse',
+      skillIds: [
+          'pandas',
+          'numpy',
+          'python'
+        ]
     }
   ],
 
@@ -63,41 +70,224 @@ export const environment = {
 
   formations: [
     {
-      titre: "Licence Professionnelle - Administration Systèmes et Réseaux",
+      title: "Licence Professionnelle - Administration Systèmes et Réseaux",
       etablissement: "Université d’Antananarivo - ESPA",
-      annee: "2018 - 2021"
+      years: "2018 - 2021"
     },
     {
-      titre: "Autoformation en Développement Web et Odoo",
+      title: "Autoformation en Développement Web et Odoo",
       etablissement: "OpenClassrooms, YouTube, Udemy",
-      annee: "2021 - Aujourd’hui"
+      years: "2021 - Aujourd’hui"
     }
   ],
 
-  projets: [
+  projects: [
     {
-      titre: "ERP interne & Odoo (MINIMAD)",
+      title: "ERP interne & Odoo",
+      company: "sparkmodel",
       description: "Développement fullstack d’un ERP interne et travail sur Odoo pour la gestion commerciale et logistique.",
-      techno: ['Angular', 'Python', 'PostgreSQL', 'Redis', 'Odoo'],
-      annee: "2023 - 2024"
+      skillIds: ['angular', 'django', 'postgres', 'odoo', 'git'],
+      years: "2023 - 2024"
     },
     {
-      titre: "Milezimweb",
-      description: "Création d’un site web de vente de vin avec filtres dynamiques (Angular), système de filtrage par navigation latérale, grille de produits dynamique.",
-      techno: ['Angular', 'Bootstrap', 'TypeScript'],
-      annee: "2024"
+      title: "Milezimweb",
+      company: "sparkmodel",
+      description: "Création d’un site web de vente de vin avec filtres dynamiques (Angular)...",
+      skillIds: ['angular', 'django', 'postgres', 'odoo', 'git'],
+      years: "2024"
     },
     {
-      titre: "Projet ONG environnementale",
-      description: "Plateforme de suivi de projet, gestion budgétaire et suivi-évaluation pour une ONG malgache.",
-      techno: ['Angular', 'PostgreSQL', 'Python'],
-      annee: "2025"
+      title: "Projet ONG environnementale",
+      company: "ONG locale",
+      description: "Plateforme de suivi de projet, gestion budgétaire et suivi-évaluation...",
+      skillIds: ['angular', 'django', 'postgres', 'odoo', 'git'],
+      years: "2025"
     },
     {
-      titre: "Jeu Monopoly Madagascar",
-      description: "Adaptation géographique du jeu Monopoly avec des villes malgaches, cartes 'Sanjila' et 'Fikambanana', billets en Ariary.",
-      techno: ['Design UX/UI', 'JS (prototype)'],
-      annee: "2025"
+      title: "Jeu Monopoly Madagascar",
+      company: "Personnel",
+      description: "Adaptation géographique du jeu Monopoly avec des villes malgaches...",
+      skillIds: ['angular', 'django', 'postgres', 'odoo', 'git'],
+      years: "2025"
+    },
+    {
+      title: "Gestion documents administratives",
+      company: "madauto",
+      description: "Gestion des documents administratifs et des processus internes.",
+      skillIds: ['php', 'codeigniter', 'mysql'],
+      years: "2025"
     }
-  ]
+  ],
+
+  parcours: [
+    {
+      id: 'sparkmodel',
+      poste: 'Dev Fullstack',
+      company: 'Sparkmodel',
+      years: '2023 - present',
+      duration: '2 ans',
+      description: 'Une company specialise en conception et production des voitures miniature de collection',
+      skillIds: [
+        'angular',
+        'python',
+        'rabbitmq',
+        'postgres',
+        'pandas',
+        'numpy',
+        'odoo',
+        'git'
+      ]
+    },
+    {
+      id: 'madauto',
+      poste: 'Dev Fullstack + assistance IT',
+      company: 'Madagascar Automobile',
+      years: '2022',
+      duration: '1 an',
+      description: 'Une concessionaire automobile',
+      skillIds: [
+        'php',
+        'codigniter',
+        'postgres',
+        'git',
+        'network'
+      ]
+    }
+  ],
+
+  allSkills: [
+    { 
+      id: 'angular', 
+      label: 'Angular', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg', 
+      level: '★★★☆☆'  
+    },
+    { 
+      id: 'python', 
+      label: 'Python', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', 
+      level: '★★★★☆'  
+    },
+    { 
+      id: 'flask', 
+      label: 'Flask', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg', 
+      level: '★★★☆☆'  
+    },
+    { 
+      id: 'postgres', 
+      label: 'PostgreSQL', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', 
+      level: '★★★★☆'  
+    },
+    { 
+      id: 'odoo', 
+      label: 'Odoo', 
+      logo: 'icons/odoo.png', 
+      level: '★★★☆☆'  
+    },
+    { 
+      id: 'git', 
+      label: 'Git', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', 
+      level: '★★★★☆'  
+    },
+    { 
+      id: 'php', 
+      label: 'Php', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', 
+      level: '★★★☆☆'  
+    },
+        { 
+      id: 'codigniter', 
+      label: 'CodeIgniter', 
+      logo: 'icons/CodeIgniter.png', 
+      level: '★★★☆☆'  
+    },
+    { 
+      id: 'mysql', 
+      label: 'Mysql', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'docker', 
+      label: 'Docker', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'zabbix', 
+      label: 'Zabbix', 
+      logo: 'icons/zabbix.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'glpi', 
+      label: 'GLPI', 
+      logo: 'icons/glpi.png', 
+      level: '★★★☆☆'  
+    }
+    ,
+    {
+      id: 'windows', 
+      label: 'Windows', 
+      logo: 'icons/Windows.png', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'ubuntu', 
+      label: 'Ubuntu', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'pandas', 
+      label: 'Pandas', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'numpy', 
+      label: 'Numpy', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'typescript', 
+      label: 'Typescript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'javascript', 
+      label: 'JavaScript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'sql', 
+      label: 'Sql', 
+      logo: 'icons/SQL.png', 
+      level: '★★★★☆'  
+    },
+    {
+      id: 'nest', 
+      label: 'NestJs', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'bootstrap', 
+      label: 'Bootstrap', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'rabbitmq', 
+      label: 'RabbitMq', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg', 
+      level: '★★★☆☆'  
+    }
+  ],
 };
