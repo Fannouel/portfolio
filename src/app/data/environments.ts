@@ -150,7 +150,9 @@ export const environment = {
         'codigniter',
         'postgres',
         'git',
-        'network'
+        'network',
+        'zabbix',
+        'glpi'
       ]
     }
   ],
