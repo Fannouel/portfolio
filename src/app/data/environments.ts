@@ -115,7 +115,14 @@ export const environment = {
       company: "madauto",
       description: "Gestion des documents administratifs et des processus internes.",
       skillIds: ['php', 'codeigniter', 'mysql'],
-      years: "2025"
+      years: "2023"
+    },
+    {
+      title: "Mis en place d'un système de monitoring",
+      company: "madauto",
+      description: "Mise en place d'un système de monitoring des serveurs et des applications.",
+      skillIds: ['glpi', 'zabbix', 'mysql'],
+      years: "2022"
     }
   ],
 
