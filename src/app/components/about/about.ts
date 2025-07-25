@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { environment } from '../../data/environments';
 import { CommonModule } from '@angular/common';
 // Import Bootstrap JS
 import * as bootstrap from 'bootstrap';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-about',
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './about.html',
   styleUrl: './about.scss'
@@ -17,7 +19,16 @@ export class About {
   projects = environment.projects;
   hardSkills = environment.hardSkills;
   selectedParcours: any = null;
+  selectedProject: any = null;
+
+  constructor(
+    @Inject(LOCALE_ID) public locale: string) {}
+
   showModal = false;
+
+  getParcours(): any {
+    return this.parcours;
+  }
   getParcoursById(id: string) {
     return this.parcours.find(p => p.id === id);
   }
@@ -34,7 +45,7 @@ export class About {
     this.showModal = true;
   }
 
-  filteredProjectsByCompany(company: string) {
+  filteredProjectsByCompany(company: string): any {
     return this.projects.filter(p => p.company === company);
   }
 }

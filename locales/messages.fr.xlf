@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about" datatype="html">
+        <source>À propos:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullname" datatype="html">
+        <source>ANDRIANJAFIMALALA Harimanantsoa Fanoela</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1285640124261981844" datatype="html">
+        <source>Icône diplôme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="diploma" datatype="html">
+        <source>Ingénieur en informatique polyvalent</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description-perso" datatype="html">
+        <source> Développeur fullstack passionné par la technologie et les projects à fort impact. Je suis curieux, rigoureux, et toujours prêt à relever de nouveaux défis. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="typewriter" datatype="html">
+        <source>&quot;Créer. Optimiser. Répéter.&quot;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills" datatype="html">
+        <source>Mes Compétences:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skill-label" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ getSkillsById(tech)?.label }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="parcours" datatype="html">
+        <source>Mes parcours professionnels:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="xp" datatype="html">
+        <source>xp:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description" datatype="html">
+        <source>Description:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="realised-projects" datatype="html">
+        <source>Projets réalisés:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-title" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ project.title }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-description-complete" datatype="html">
+        <source>Description complète :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-link" datatype="html">
+        <source>Lien: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-technos" datatype="html">
+        <source>Technos: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="back" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Revenir à la liste </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">164,166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="used-skills" datatype="html">
+        <source>Compétences utilisées:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.html</context>
+          <context context-type="linenumber">168,169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullname-home" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ fullname }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mail" datatype="html">
+        <source>andrianjafyfanoela@gmail.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone" datatype="html">
+        <source>+261 34 25 098 49</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkedin" datatype="html">
+        <source>Fanoela</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="github" datatype="html">
+        <source>Fanoela git repository</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="learn-more" datatype="html">
+        <source> EN SAVOIR PLUS </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footerSocialText" datatype="html">
+        <source>Suivez-nous sur les réseaux sociaux</source>
+        <target>Suivez-nous sur les réseaux sociaux</target>
+      </trans-unit>
+      <trans-unit id="footerDevText" datatype="html">
+        <source>Fait avec ❤️ et Angular — par Fanoela</source>
+        <target>Fait avec ❤️ et Angular — par Fanoela</target>
+      </trans-unit>
+      <trans-unit id="motivationTitle" datatype="html">
+        <source>Ma motivation:</source>
+        <target>Ma motivation:</target>
+      </trans-unit>
+      <trans-unit id="motivationText" datatype="html">
+        <source>Curieux et passionné, je cherche à approfondir mes compétences en IA et en traitement de données. Chaque projet est pour moi une opportunité d'apprendre, d'optimiser et d'innover.</source>
+        <target>Curieux et passionné, je cherche à approfondir mes compétences en IA et en traitement de données. Chaque projet est pour moi une opportunité d'apprendre, d'optimiser et d'innover.</target>
+      </trans-unit>
+      <trans-unit id="previous" datatype="html">
+        <source><i class="bi bi-telephone"></i>Contact moi</source>
+        <target><i class="bi bi-telephone"></i>Contact moi</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

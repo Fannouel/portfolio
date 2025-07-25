@@ -1,27 +1,28 @@
-
 <div class="background-gradient"></div>
 <div class="container">
   <div class="row">
-    <div class=" about-content col-md-6 col-12">
+    <div class="about-content col-md-6 col-12">
       <div class="d-flex flex-column justify-content-center text-white px-4 py-5 h-100">
-        <h1 class="display-5 fw-bold mb-4 text-gradient">À propos:</h1>
-        <h2 class="fw-semibold text-white mb-3">ANDRIANJAFIMALALA Harimanantsoa Fanoela</h2>
+        <h1 class="display-5 fw-bold mb-4 text-gradient" i18n="@@about">À propos:</h1>
+        <h2 class="fw-semibold text-white mb-3" i18n="@@fullname">ANDRIANJAFIMALALA Harimanantsoa Fanoela</h2>
         <h4 class="fw-normal text-white mb-4">
           <img
             src="icons/diploma-svg.svg"
             width="50"
             height="50"
             class="me-2"
-          />Ingénieur en informatique polyvalent
+            alt="Icône diplôme" i18n-alt
+          />
+          <span i18n="@@diploma">Ingénieur en informatique polyvalent</span>
         </h4>
-        <p class="text-light mb-3">
+        <p class="text-light mb-3" i18n="@@description-perso">
           Développeur fullstack passionné par la technologie et les projects à fort impact. 
           Je suis curieux, rigoureux, et toujours prêt à relever de nouveaux défis.
         </p>
 
-        <p class="typewriter text-white">"Créer. Optimiser. Répéter."</p>
+        <p class="typewriter text-white" i18n="@@typewriter">"Créer. Optimiser. Répéter."</p>
 
-        <h1 class="fw-bold text-gradient">Mes Compétences:</h1>
+        <h1 class="fw-bold text-gradient" i18n="@@skills">Mes Compétences:</h1>
         <div class="d-flex flex-column justify-content-center text-white" style="max-width: 600px;">
           <!-- Accordion des stacks -->
           <div class="accordion accordion-flush mb-4" id="skillsAccordion">
@@ -53,11 +54,12 @@
                         <img
                           [src]="getSkillsById(tech)?.logo"
                           [alt]="getSkillsById(tech)?.label + ' logo'"
+                          i18n-alt
                           width="24"
                           height="24"
                           class="me-2"
                         />
-                        <strong>{{ getSkillsById(tech)?.label }}</strong>
+                        <strong i18n="@@skill-label">{{ getSkillsById(tech)?.label }}</strong>
                         <span class="ms-auto text-warning small">{{ getSkillsById(tech)?.level }}</span>
                       </li>
                     </ul>
@@ -66,79 +68,137 @@
               </div>
             </ng-container>
           </div>
-
         </div>
       </div>
     </div>
 
-    <div class="col-md-6 col-12 about-content">
-        <h1 class="display-5 fw-bold mb-4 text-gradient text-light">Mes parcours professionnels:</h1>
+    <div class="about-content col-md-6 col-12">
+      <div class="d-flex flex-column text-white px-4 py-5 h-100">
+        <h1 class="display-5 fw-bold mb-4 text-gradient text-light" i18n="@@parcours">Mes parcours professionnels:</h1>
         <div class="list-group">
-          <ng-container *ngFor="let p of parcours">
-            <a href="#" class="list-group-item list-group-item-action" (click)="openParcoursModal(p); $event.preventDefault()">
+          <ng-container *ngFor="let p of getParcours()">
+            <a href="#" class="list-group-item list-group-item-action" (click)="openParcoursModal(p); $event.preventDefault()" role="button">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"><strong>{{ p.years}}:</strong> {{ p.poste }}</h5>
-                <small>{{ p.duration }}</small>
+                <h5 class="mb-1">
+                  <strong>{{ p.years }}:</strong> 
+                  <span>{{ p.poste }}</span>
+                </h5>
+                <i class="bi bi-chevron-right"></i>
               </div>
               <p class="mb-1"><strong>{{ p.company }}</strong></p>
-              <small>{{ p.description}}</small>
-              <p>xp: 
-                <ng-container *ngFor="let skill of p.skillIds">
-                  <ng-container *ngIf="getSkillsById(skill)?.logo as logo">
-                    <img
-                      *ngIf="isValidLogo(logo)"
-                      [src]="logo"
-                      [alt]="getSkillsById(skill)?.label + ' logo'"
-                      width="24"
-                      height="24"
-                      class="me-2"
-                    />
-                  </ng-container>
+              <small>{{ p.description[locale] }}</small>
+              <p i18n="@@xp">xp:</p>
+              <ng-container *ngFor="let skill of p.skillIds">
+                <ng-container *ngIf="getSkillsById(skill)?.logo as logo">
+                  <img
+                    *ngIf="isValidLogo(logo)"
+                    [src]="logo"
+                    [alt]="getSkillsById(skill)?.label + ' logo'"
+                    i18n-alt
+                    width="24"
+                    height="24"
+                    class="me-2"
+                  />
                 </ng-container>
-                <a href="" class="btn btn-secondary btn-sm mt-2">en detail ...</a>
-              </p>
+              </ng-container>
             </a>
           </ng-container>
         </div>
+        <div class="mt-4">
+          <h1 class="display-5 text-light" i18n="@@motivationTitle">Ma motivation</h1>
+          <p class="mb-0" i18n="@@motivationText">
+            Curieux et passionné, je cherche à approfondir mes compétences en IA et en traitement de données. Chaque projet est pour moi une opportunité d'apprendre, d'optimiser et d'innover.
+          </p>
+        </div>
+        <div class="mt-4">
+          <a
+            class="btn btn-success btn-lg shadow-sm w-auto align-self-start"
+            routerLink="/home"
+            i18n="@@previous"
+          ><i class="bi bi-telephone"></i>
+            Contact moi
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </div>  
 </div> 
+
 <!-- Modal -->
 <div class="modal fade show d-block" tabindex="-1" *ngIf="showModal" style="background: rgba(0,0,0,0.5);">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">
-          <strong>{{ selectedParcours?.years }}:</strong> {{ selectedParcours?.poste }} ({{ selectedParcours?.company }})
+          <strong>{{ selectedParcours?.years }}:</strong> 
+          <span>{{ selectedParcours?.poste }}</span> 
+          (<span>{{ selectedParcours?.company }}</span>)
         </h5>
-        <button type="button" class="btn-close" aria-label="Close" (click)="showModal = false"></button>
+        <button type="button" class="btn-close" aria-label="Close" (click)="showModal = false; selectedProject = null"></button>
       </div>
       <div class="modal-body">
-        <p><strong>Description:</strong> {{ selectedParcours?.description }}</p>
-        <p><strong>Projets realiser:</strong></p>
-        <ul class="list-group">
-          <li 
-            *ngFor="let project of filteredProjectsByCompany(selectedParcours?.id)" 
-            class="list-group-item list-group-item-action"
-          >
-            <h5 class="text-danger">{{ project.title }}</h5>
-            <p>{{ project.description }}</p>
-          </li>
-        </ul>
-        <p><strong>Compétences utilisées:</strong></p>
-        <div class="d-flex flex-wrap">
-          <ng-container *ngFor="let skill of selectedParcours?.skillIds">
-            <ng-container *ngIf="getSkillsById(skill) as s">
-              <img *ngIf="isValidLogo(s.logo)" [src]="s.logo" [alt]="s.label + ' logo'" class="me-2 mb-2" width="32" height="32" />
-              <span class="me-3">{{ s.label }}</span><span class="text-warning"> ({{ s.level || 'Niveau inconnu' }})</span>
+        <ng-container *ngIf="!selectedProject">
+          <p><strong i18n="@@description">Description:</strong> {{ selectedParcours?.description[locale] }}</p>
+          <p i18n="@@realised-projects">Projets réalisés:</p>
+          <ul class="list-group">
+            <li 
+              *ngFor="let project of filteredProjectsByCompany(selectedParcours?.id)"
+              class="list-group-item list-group-item-action"
+              (click)="selectedProject = project"
+            >
+              <h5 class="text-danger" *ngIf="project">{{ project.title[locale] }}</h5>
+              <p *ngIf="project">{{ project.description[locale] }}</p>
+            </li>
+          </ul>
+        </ng-container>
+        <div *ngIf="selectedProject">
+          <h5><span class="text-danger">{{ selectedProject.title[locale] }}</span></h5>
+          <p><strong i18n="@@project-description-complete">Description complète :</strong> {{ selectedProject.description[locale] }}</p>
+          <p>{{ selectedProject.more[locale] }}</p>
+          <p *ngIf="selectedProject.link && selectedProject.link !== null">
+            <strong i18n="@@project-link">Lien: </strong> 
+            <a [href]="selectedProject.link" target="_blank" rel="noopener noreferrer">{{ selectedProject.title[locale] }}</a>
+          </p>
+          <p>
+            <strong i18n="@@project-technos">Technos: </strong>
+            <ng-container *ngFor="let skill of selectedProject.skillIds">
+              <ng-container *ngIf="getSkillsById(skill)?.logo as logo">
+                <ul class="list-unstyled">
+                  <li
+                    class="d-flex align-items-center mb-2"
+                  >
+                    <img
+                      *ngIf="isValidLogo(logo)"
+                      [src]="logo"
+                      [alt]="getSkillsById(skill)?.label + ' logo'"
+                      i18n-alt
+                      width="30"
+                      height="30"
+                      class="me-2"
+                    />
+                    <a i18n="@@skill-label">{{ getSkillsById(skill)?.label }}</a>
+                    <span class="ms-auto text-warning small">{{ getSkillsById(skill)?.level }}</span>
+                  </li>
+                </ul>
+              </ng-container>
             </ng-container>
-          </ng-container>
+          </p>
+          <button class="btn btn-sm btn-warning" (click)="selectedProject = null" i18n="@@back">
+            <i class="bi bi-arrow-left"></i> Revenir à la liste
+          </button>
         </div>
+        <ng-container *ngIf="!selectedProject">
+          <p><strong i18n="@@used-skills">Compétences utilisées:</strong></p>
+          <div class="d-flex flex-wrap">
+            <ng-container *ngFor="let skill of selectedParcours?.skillIds">
+              <ng-container *ngIf="getSkillsById(skill) as s">
+                <img *ngIf="isValidLogo(s.logo)" [src]="s.logo" [alt]="s.label + ' logo'" i18n-alt class="me-2 mb-2" width="20" height="20" />
+                <span class="text-warning">({{ s.level || 'Niveau inconnu' }}) </span>  
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
       </div>
-      
     </div>
   </div>
 </div>
-
-
-

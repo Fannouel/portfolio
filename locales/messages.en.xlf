@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about" datatype="html">
+        <source>À propos:</source>
+        <target>About:</target>
+      </trans-unit>
+      <trans-unit id="fullname" datatype="html">
+        <source>ANDRIANJAFIMALALA Harimanantsoa Fanoela</source>
+        <target>ANDRIANJAFIMALALA Harimanantsoa Fanoela</target>
+      </trans-unit>
+      <trans-unit id="1285640124261981844" datatype="html">
+        <source>Icône diplôme</source>
+        <target>Diploma icon</target>
+      </trans-unit>
+      <trans-unit id="diploma" datatype="html">
+        <source>Ingénieur en informatique polyvalent</source>
+        <target>Software Engineer</target>
+      </trans-unit>
+      <trans-unit id="description-perso" datatype="html">
+        <source> Développeur fullstack passionné par la technologie et les projects à fort impact. Je suis curieux, rigoureux, et toujours prêt à relever de nouveaux défis. </source>
+        <target>Fullstack developer passionate about technology and high-impact projects. I’m curious, detail-oriented, and always ready for new challenges.</target>
+      </trans-unit>
+      <trans-unit id="typewriter" datatype="html">
+        <source>"Créer. Optimiser. Répéter."</source>
+        <target>"Create. Optimize. Repeat."</target>
+      </trans-unit>
+      <trans-unit id="skills" datatype="html">
+        <source>Mes Compétences:</source>
+        <target>My Skills:</target>
+      </trans-unit>
+      <trans-unit id="skill-label" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ getSkillsById(tech)?.label }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{ getSkillsById(tech)?.label }}"/></target>
+      </trans-unit>
+      <trans-unit id="parcours" datatype="html">
+        <source>Mes parcours professionnels:</source>
+        <target>My career paths:</target>
+      </trans-unit>
+      <trans-unit id="xp" datatype="html">
+        <source>xp:</source>
+        <target>xp:</target>
+      </trans-unit>
+      <trans-unit id="description" datatype="html">
+        <source>Description:</source>
+        <target>Description:</target>
+      </trans-unit>
+      <trans-unit id="realised-projects" datatype="html">
+        <source>Projets réalisés:</source>
+        <target>Completed Projects:</target>
+      </trans-unit>
+      <trans-unit id="project-title" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ project.title }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{ project.title }}"/></target>
+      </trans-unit>
+      <trans-unit id="project-description-complete" datatype="html">
+        <source>Description complète :</source>
+        <target>Full description:</target>
+      </trans-unit>
+      <trans-unit id="project-link" datatype="html">
+        <source>Lien: </source>
+        <target>Link: </target>
+      </trans-unit>
+      <trans-unit id="project-technos" datatype="html">
+        <source>Technos: </source>
+        <target>Technologies: </target>
+      </trans-unit>
+      <trans-unit id="back" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Revenir à la liste </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Back to list </target>
+      </trans-unit>
+      <trans-unit id="used-skills" datatype="html">
+        <source>Compétences utilisées:</source>
+        <target>Used Skills:</target>
+      </trans-unit>
+      <trans-unit id="fullname-home" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ fullname }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{ fullname }}"/></target>
+      </trans-unit>
+      <trans-unit id="mail" datatype="html">
+        <source>andrianjafyfanoela@gmail.com</source>
+        <target>andrianjafyfanoela@gmail.com</target>
+      </trans-unit>
+      <trans-unit id="phone" datatype="html">
+        <source>+261 34 25 098 49</source>
+        <target>+261 34 25 098 49</target>
+      </trans-unit>
+      <trans-unit id="linkedin" datatype="html">
+        <source>Fanoela</source>
+        <target>Fanoela</target>
+      </trans-unit>
+      <trans-unit id="github" datatype="html">
+        <source>Fanoela git repository</source>
+        <target>Fanoela git repository</target>
+      </trans-unit>
+      <trans-unit id="learn-more" datatype="html">
+        <source> EN SAVOIR PLUS </source>
+        <target> LEARN MORE </target>
+      </trans-unit>
+      <trans-unit id="footerSocialText" datatype="html">
+        <source>Retrouvez-moi sur les réseaux sociaux</source>
+        <target>Find me on social media</target>
+      </trans-unit>
+
+      <trans-unit id="footerDevText" datatype="html">
+        <source>Fait avec ❤️ et Angular — par Fanoela</source>
+        <target>Made with ❤️ and Angular — by Fanoela</target>
+      </trans-unit>
+
+      <trans-unit id="motivationTitle" datatype="html">
+        <source>Ma motivation:</source>
+        <target>My motivation:</target>
+      </trans-unit>
+      <trans-unit id="motivationText" datatype="html">
+        <source>Curieux et passionné, je cherche à approfondir mes compétences en IA et en traitement de données. Chaque projet est pour moi une opportunité d'apprendre, d'optimiser et d'innover.</source>
+        <target>Curious and passionate, I'm eager to deepen my skills in AI and data processing. Every project is a chance to learn, optimize, and innovate.</target>
+      </trans-unit>
+      <trans-unit id="previous" datatype="html">
+        <source><i class="bi bi-telephone"></i>Contact moi</source>
+        <target><i class="bi bi-telephone"></i>Contact me</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
