@@ -2,9 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/fr/index.html" },
     { "source": "/fr", "destination": "/fr/index.html" },
-    { "source": "/fr/**", "destination": "/fr/$1" },
-    { "source": "/en", "destination": "/en/index.html" },
-    { "source": "/en/**", "destination": "/en/$1" }
+    { "source": "/en", "destination": "/en/index.html" }
   ],
   "cleanUrls": true,
   "trailingSlash": false
