@@ -214,7 +214,7 @@ export const environment = {
       en: "Deployment of ZABBIX and GLPI for IT infrastructure management and monitoring.",
       fr: "Déploiement de ZABBIX et GLPI pour la gestion et la surveillance du parc informatique."
     },
-    skillIds: ['glpi', 'zabbix', 'mysql'],
+    skillIds: ['glpi', 'zabbix', 'mysql', 'linux', 'ubuntu'],
     company: "madauto",
     years: "2022",
     link: null
@@ -240,7 +240,9 @@ export const environment = {
         'pandas',
         'numpy',
         'odoo',
-        'git'
+        'git',
+        'linux',
+        'ubuntu'
       ]
     },
     {
@@ -260,7 +262,9 @@ export const environment = {
         'git',
         'network',
         'zabbix',
-        'glpi'
+        'glpi',        
+        'linux',
+        'ubuntu'
       ]
     }
   ],
@@ -397,6 +401,12 @@ export const environment = {
       id: 'rabbitmq', 
       label: 'RabbitMq', 
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg', 
+      level: '★★★☆☆'  
+    },
+    {
+      id: 'linux', 
+      label: 'Linux', 
+      logo: 'icons/Linux.png', 
       level: '★★★☆☆'  
     }
   ],
